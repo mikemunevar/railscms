@@ -36,9 +36,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 #add in some core gems #MDM
-gem 'activeadmin', github: 'activeadmin'   #you may need to get the github version
+gem 'activeadmin', github: 'activeadmin'   #you may need to get the github version #MDM 
 gem 'devise'
-gem 'active_admin_editor'
+# Use the following active-admin editor to avoid any CSS errors. #MDM
+# http://stackoverflow.com/questions/23462571/undefined-mixin-box-shadow-with-active-admin-editor
+# gem 'active_admin_editor'
+gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
+# Follow these instructions to create the first user
+# http://stackoverflow.com/questions/8284076/how-do-you-change-activeadmin-password
+
 gem 'font-awesome-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
