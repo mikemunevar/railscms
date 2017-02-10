@@ -1,5 +1,8 @@
 ActiveAdmin.register Section do
 
+# Remember to permit the actions that are allowed: #MDM
+permit_params :name
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
