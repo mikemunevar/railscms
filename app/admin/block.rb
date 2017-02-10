@@ -31,7 +31,11 @@ ActiveAdmin.register Block do
        f.inputs "Details" do
             f.input :title,         :label => "Title"
             f.input :show_title,    :label => "Show Title"
-            f.input :body,          :label => "Body"
+            
+            # Add the html editor to the body
+            # f.input :body,          :label => "Body"
+            f.input :body, as: :html_editor,  :label => "Body"
+
             
             f.input :position,      :label => "Position", :as => :select, :collection => [["Jumbotron", "jumbotron"], ["Block", "block"]] 
             f.input :display,       :label => "Display", :as => :select, :collection => [["All pages", "all"], ["Homepage Only", "home"], ["All But Homepage", "nohome"]] 
