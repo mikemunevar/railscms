@@ -1,32 +1,33 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-  <div class="container">
-    <h1>Hello, world!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-  </div>
-</div>
+<!--<div class="jumbotron">-->
+<!--  <div class="container">-->
+<!--    <h1>Hello, world!</h1>-->
+<!--    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>-->
+<!--    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+<!--  </div>-->
+<!--</div>-->
+
 
 <% if @jumbotron.exists? %>
     <%= @jumbotron.each do |jumbotron| %>
         <% if params[:controller] == 'home' %>
-            <% if jumotron.display == 'home' %> || jumbotron.display =='all'%>
+            <% if jumbotron.display == 'home' || jumbotron.display =='all' %>
                 <!-- Main jumbotron for a primary marketing message or call to action -->
                 <div class="jumbotron">
                     <div class="container">
                     <h1><%= jumbotron.title %></h1>
-                        <%= jumbotron.body %>
+                        <%= raw jumbotron.body %>
                     </div>
                 </div>
                         
             <% end %>
         <% else %>
-            <% if jumotron.display == 'nohome' %> || jumbotron.display =='all'%>
+            <% if jumbotron.display == 'nohome' || jumbotron.display =='all' %>
                 <!-- Main jumbotron for a primary marketing message or call to action -->
                 <div class="jumbotron">
                     <div class="container">
                     <h1><%= jumbotron.title %></h1>
-                        <%= jumbotron.body %>
+                        <%= raw jumbotron.body %>
                     </div>
                 </div>
                         
