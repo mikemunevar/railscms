@@ -1,7 +1,7 @@
 ActiveAdmin.register Page do
 
 #Remember to give permission to udpate those fields
-permit_params :title, :body, :order, :is_published, :section_id, :menu_display
+permit_params :title, :body, :order, :is_published, :section_id, :menu_display, :featured
 
 
 # See permitted parameters documentation:
@@ -39,6 +39,8 @@ permit_params :title, :body, :order, :is_published, :section_id, :menu_display
             
             f.input :order,         :label => "Order"
             f.input :is_published,  :label => "Published"
+            f.input :featured,      :label => "Featured"
+
             f.input :menu_display,  :label => "Display In Menu"
             f.actions
         end
