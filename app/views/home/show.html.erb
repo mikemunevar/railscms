@@ -3,6 +3,7 @@
 
 <% @pages.each do |page| %>
     <%= page.title %>
-    <%= page.body %>
+    <!--Use raw keyword to process the HTML #MDM -->
+    <%= raw page.body %>
 <% end %>
  

@@ -41,8 +41,9 @@
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
-
-
+    
+    <!--Use the partial that you just made right here. #MDM -->
+    <%= render 'blocks/jumbotron' %>
 
     <div class="container">
       <!-- Alerts & Messages -->
@@ -53,6 +54,9 @@
       <% if flash[:alert] %>
         <div class="alert alert-danger"><% flash[:alert] %></div>
       <% end %>
+      
+      <!--Add the partial here. #MDM -->
+      <%= render 'blocks/block' %>
       
       <%= yield %>
       <hr>
