@@ -6,3 +6,34 @@
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
   </div>
 </div>
+
+<% if @jumbotron.exists? %>
+    <%= @jumbotron.each do |jumbotron| %>
+        <% if params[:controller] == 'home' %>
+            <% if jumotron.display == 'home' %> || jumbotron.display =='all'%>
+                <!-- Main jumbotron for a primary marketing message or call to action -->
+                <div class="jumbotron">
+                    <div class="container">
+                    <h1><%= jumbotron.title %></h1>
+                        <%= jumbotron.body %>
+                    </div>
+                </div>
+                        
+            <% end %>
+        <% else %>
+            <% if jumotron.display == 'nohome' %> || jumbotron.display =='all'%>
+                <!-- Main jumbotron for a primary marketing message or call to action -->
+                <div class="jumbotron">
+                    <div class="container">
+                    <h1><%= jumbotron.title %></h1>
+                        <%= jumbotron.body %>
+                    </div>
+                </div>
+                        
+            <% end %>
+
+
+        
+        <% end %>
+    <% end %>
+<% end %>
