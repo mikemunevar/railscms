@@ -1,3 +1,4 @@
+/* Renamed this file to application.css.scss from application.css  #MDM */
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -15,3 +16,9 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* Add in these files to import Bootstrap #MDM */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "main";
