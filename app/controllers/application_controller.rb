@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
   
   def getJumbotron
-    @jumbotron = Block.where("position = 'Jumbotron'")
+    @jumbotron = Block.where("position = 'jumbotron'")
   end
   
   def getBlocks
