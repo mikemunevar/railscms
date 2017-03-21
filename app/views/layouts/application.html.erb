@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>RailsCMS</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
 <body>
 
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -48,11 +48,11 @@
     <div class="container">
       <!-- Alerts & Messages -->
       <% if flash[:notice] %>
-        <div class="alert alert-success"><% flash [:notice] %></div>
+        <div class="alert alert-success"><%= flash [:notice] %></div>
       <% end %>
       
       <% if flash[:alert] %>
-        <div class="alert alert-danger"><% flash[:alert] %></div>
+        <div class="alert alert-danger"><%= flash[:alert] %></div>
       <% end %>
       
       <!--Add the partial here. #MDM -->
@@ -61,7 +61,7 @@
       <%= yield %>
       <hr>
       <footer>
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>&copy; 2016 Brand X, Inc.</p>
       </footer>
     </div> <!-- /container -->
 </body>

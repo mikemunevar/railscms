@@ -10,7 +10,8 @@ class ApplicationController < ActionController::Base
   def getPageNav
   # @pageNav = Page.where("menu_display = true && is_published = true").order(order: :asc)
   # @pageNav = Page.where("menu_display = true").order(order: :asc)
-    @pageNav = Page.where("menu_display = ? and is_published = ?").order(order: :asc)
+  # @pageNav = Page.where("menu_display = ? AND is_published = ?").order(order: :asc)
+    @pageNav = Page.where(menu_display: true, is_published: true).order(order: :asc)
 
   end
   
